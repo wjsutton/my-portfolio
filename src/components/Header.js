@@ -1,7 +1,7 @@
 function Header() {
     return (
-        <header>
-            <h1>Jane Doe</h1>
+        <header className="App-header">
+            <h1>Will Sutton</h1>
             <p>Data Visualization Expert</p>
         </header>
     );

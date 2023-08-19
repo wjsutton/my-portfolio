@@ -1,3 +1,85 @@
+/* Reset some default styles and set a box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root variables for easy theme adjustments */
+:root {
+  --primary-color: #e63946;  /* Adjust as needed */
+  --background-color: #282c34;
+  --font-color: #e5e5e5;
+  --secondary-font-color: #b5b5b5;
+  --border-color: #444;
+}
+
+body {
+  font-family: 'Arial', sans-serif;  /* Use any preferred font */
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+nav {
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: var(--font-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+header, section {
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+p, cite {
+  color: var(--secondary-font-color);
+  margin-bottom: 1rem;
+}
+
+.project-card {
+  background-color: #333;
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  padding: 1rem 0;
+  background-color: var(--background-color);
+  border-top: 1px solid var(--border-color);
+}
+
+footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--font-color);
+}
+
+/* Existing styles from App.css */
 .App {
   text-align: center;
 }
@@ -9,19 +91,24 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+      animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1692427741122-f6a9879b5aa5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80'); /*Point to the image location */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center center; /* Center the image */
+  background-color: #282c34; /* This color will show if the image doesn't load or before it loads */
+  min-height: 400px; /* Adjust based on your preference */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 60px 0; /* Add some padding to top and bottom */
 }
 
 .App-link {
@@ -30,9 +117,9 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      transform: rotate(360deg);
   }
 }
